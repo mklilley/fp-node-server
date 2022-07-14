@@ -20,12 +20,12 @@ const server = http.createServer((req,res)=>{
             code = 200
             break;
         default:
-            body = `${req.url} does not exist`
+            body = `${req.url} does not exist`;
             code = 404
     }
 
-    res.statusCode = code
-    res.end(body)
+    res.statusCode = code;
+    res.end(body);
 
 });
 
