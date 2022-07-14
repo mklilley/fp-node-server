@@ -16,8 +16,9 @@ const server = http.createServer((req,res)=>{
             code = 200;
             break;
         case "/cats":
-            body = "George and Cleo are my cats"
-            code = 200
+            const cats = [{name:"cleo", color:"brown"}, {name:"George", color:"black"}];
+            body = JSON.stringify(cats);
+            code = 200;
             break;
         default:
             body = `${req.url} does not exist`;
